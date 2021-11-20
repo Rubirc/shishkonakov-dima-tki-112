@@ -6,7 +6,7 @@ using namespace std;
 * \param n число n
 * \return число a увеличенное в n раз
 */
-int getproduct(int a, int n);
+const int getproduct(int a, int n);
 
 /*
 * \brief увеличение числа a в 2n раз
@@ -14,7 +14,7 @@ int getproduct(int a, int n);
 * \param n число n
 * \return число a увеличенное в 2n раз
 */
-int getdoubleproduct(int a, int n);
+const int getdoubleproduct(int a, int n);
 
 /*
 * \brief увеличение числа a в 3n раз
@@ -22,7 +22,7 @@ int getdoubleproduct(int a, int n);
 * \param n число n
 * \return число a увеличенное в 3n раз
 */
-int gettripleproduct(int a, int n);
+const int gettripleproduct(int a, int n);
 
 /*
 * \brief выбор заполнения массива
@@ -76,17 +76,17 @@ int main()
 	return 0;
 }
 
-int getproduct(int a, int n)
+const int getproduct(int a, int n)
 {
 	return (a * n);
 }
 
-int getdoubleproduct(int a, int n)
+const int getdoubleproduct(int a, int n)
 {
 	return (a * 2 * n);
 }
 
-int gettripleproduct(int a, int n)
+const int gettripleproduct(int a, int n)
 {
 	return (a * 3 * n);
 }
