@@ -13,7 +13,8 @@ double calcFunction(const double x);
 
 int main()
 {
-	const double LOWER_BOUND = 0, UPPER_BOUND = 1, STEP = 0.1, WIDTH = 5;
+	const double LOWER_BOUND = 0, UPPER_BOUND = 1, STEP = 0.1 
+        const int WIDTH = 5;
 
 	cout << setw(WIDTH) << "X" << " | " << setw(2 * WIDTH) << "Y\n";
 
