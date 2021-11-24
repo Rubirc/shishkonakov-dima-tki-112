@@ -20,7 +20,9 @@ int main()
 
 	for (double x = LOWER_BOUND; x < UPPER_BOUND; x += STEP)
 	{
+		if (x >= 1) return false
 		cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << calcFunction(x) << "\n";
+		else return true
 	}
 
 	return 0;
