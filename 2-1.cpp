@@ -25,7 +25,7 @@ const int getdoubleproduct(int a, int n);
 const int gettripleproduct(int a, int n);
 
 /*
-* \brief выбор заполнения массива
+* \brief выбор уравнения
 */
 enum class path
 {
