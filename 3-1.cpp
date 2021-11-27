@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cmath>
 
@@ -9,9 +9,14 @@ using namespace std;
 * \param x Аргумент функции
 * \return Значение функции
 **/
-double calcFunction(const double x);
+double СalcFunction(const double x);
 
-bool isCalculated(const double x);
+/**
+* \brief Проверка на существование функции
+* \param x Аргумент функции
+* \return False при несуществовании функции
+**/
+bool IsCalculated(const double x);
 
 int main()
 {
@@ -25,21 +30,21 @@ int main()
 
 	for (double x = LOWER_BOUND; x < UPPER_BOUND; x += STEP)
 	{
-		if (!isCalculated(x))
-			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << "невозможно вычислить значение функции в данной точке.\n";
+		if (!IsCalculated(x))
+			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << "Невозможно вычислить значение функции в данной точке.\n";
 		else
-			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << calcFunction(x) << "\n";
+			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << СalcFunction(x) << "\n";
 	}
 
 	return 0;
 }
 
-double calcFunction(const double x)
+double СalcFunction(const double x)
 {
 	return sqrt(1.0 - x) - cos(sqrt(1.0 - x));
 }
 
-bool isCalculated(const double x)
+bool IsCalculated(const double x)
 {
 	return ((1.0 - x) >= 0);
 }
