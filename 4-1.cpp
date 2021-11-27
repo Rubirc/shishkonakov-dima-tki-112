@@ -94,6 +94,8 @@ enum class FillType
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+    
     const int MIN = -1000, MAX = 1000;
 
     cout << "Please input array length: ";
