@@ -35,10 +35,10 @@ int main()
 
 double GetA(const double x, const double y, const double z)
 {
-	return  x * 2 * y * (x + 1) - sin(2 * (x + z));
+	return  (pow(x, 2) * (x + 1)) / (y - pow(sin(x + z), 2));
 }
 
 double GetB(const double x, const double y, const double z)
 {
-	return  sqrt(x * y * z) + cos(2 * 2 * (x + y));
+	return  sqrt((x * y) / z) + pow(cos(pow(x + y, 2)), 2);
 }
