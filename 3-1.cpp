@@ -16,7 +16,7 @@ double СalcFunction(const double x);
 * \param x Аргумент функции
 * \return False при несуществовании функции
 **/
-bool IsCalculated(const double x);
+bool NotCalculated(const double x);
 
 int main()
 {
@@ -30,7 +30,7 @@ int main()
 
 	for (double x = LOWER_BOUND; x < UPPER_BOUND; x += STEP)
 	{
-		if (!IsCalculated(x))
+		if (NotCalculated(x))
 			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << "Невозможно вычислить значение функции в данной точке.\n";
 		else
 			cout << setw(WIDTH) << x << " | " << setw(2 * WIDTH) << СalcFunction(x) << "\n";
@@ -44,7 +44,7 @@ double СalcFunction(const double x)
 	return sqrt(1.0 - x) - cos(sqrt(1.0 - x));
 }
 
-bool IsCalculated(const double x)
+bool NotCalculated(const double x)
 {
 	return ((1.0 - x) >= 0);
 }
